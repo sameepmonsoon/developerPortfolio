@@ -1,5 +1,5 @@
 import React, { createContext, useState } from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createHashRouter } from "react-router-dom"; // import createHashRouter from react-router-dom
 import Home from "./Pages/Home";
 import "./App.css";
 import Projects from "./Pages/Projects";
@@ -8,10 +8,12 @@ import PageNotFound from "./Pages/PageNotFound";
 import { Helmet } from "react-helmet";
 import { TbSquareLetterM } from "react-icons/tb";
 import { renderToString } from "react-dom/server";
-import About from "./Pages/About";
+import AboutPage from "./Pages/AboutPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
 export const ThemeContext = createContext<any>(null);
+
 const App = () => {
   const [theme, setTheme] = useState("dark");
   // Create a styled icon with white fill color
@@ -26,29 +28,31 @@ const App = () => {
   const toggleTheme = () => {
     setTheme((prev) => (prev == "light" ? "dark" : "light"));
   };
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-    {
-      path: "/projects",
-      element: <Projects />,
-    },
-    {
-      path: "/about",
-      element: <About />,
-    },
 
-    {
-      path: "/contact",
-      element: <Contact />,
-    },
+  const router = createHashRouter([
     {
       path: "*",
-      element: <PageNotFound />,
+      element: <Home />,
     },
+    // {
+    //   path: "/projects",
+    //   element: <Projects />,
+    // },
+    // {
+    //   path: "/about",
+    //   element: <AboutPage />,
+    // },
+
+    // {
+    //   path: "/contact",
+    //   element: <Contact />,
+    // },
+    // {
+    //   path: "*",
+    //   element: <PageNotFound />,
+    // },
   ]);
+
   return (
     <>
       <Helmet>

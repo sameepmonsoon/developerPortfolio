@@ -3,13 +3,13 @@ import GetIntouch from "../Page Component/Contact/GetInTouch";
 
 const Contact = () => {
   return (
-    <HomeLayout
-      Children={
-        <>
-          <GetIntouch />
-        </>
-      }
-    />
+    // <HomeLayout
+    //   Children={
+    //     <>
+    <GetIntouch />
+    // </>
+    // }
+    // />
   );
 };
 

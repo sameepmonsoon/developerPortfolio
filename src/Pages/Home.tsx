@@ -8,6 +8,9 @@ import Skills from "../Page Component/SkillsPage/SkillsPage";
 import SpecialButton from "../Components/SpecialButton/SpecialButton";
 
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+import Projects from "./Projects";
+import GetIntouch from "../Page Component/Contact/GetInTouch";
+import AboutPage from "./AboutPage";
 
 const Home = () => {
   return (
@@ -37,6 +40,9 @@ const Home = () => {
           />
           <About />
           <Skills />
+          <Projects />
+          <AboutPage />
+          <GetIntouch />
         </div>
       }
     />

@@ -15,8 +15,8 @@ const Card = (props: CardTypes) => {
     <section
       className={
         otherSection
-          ? `bg-white dark:bg-deep-blue h-[30rem] w-[22rem] md:h-[35rem] md:w-[35rem] border-[1px] rounded-[5px] overflow-hidden border-gray-100 dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col  relative cursor-pointer justify-start items-center`
-          : `bg-white dark:bg-deep-blue h-[25rem] w-[22rem] md:h-[15rem] md:w-[33rem] border-[1px] rounded-[5px] overflow-hidden border-gray-200  dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col md:flex-row relative cursor-pointer justify-start items-center `
+          ? `bg-white dark:bg-deep-blue h-[30rem] w-[22rem] md:h-[35rem] md:w-[35rem] border-[1px] rounded-[10px] overflow-hidden border-gray-100 dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col  relative cursor-pointer justify-start items-center`
+          : `bg-white dark:bg-deep-blue h-[25rem] w-[22rem] md:h-[15rem] md:w-[42rem] border-[1px] rounded-[10px] overflow-hidden border-gray-200  dark:border-white/30 dark:hover:border-white/40 hover:border-gray-300 flex flex-col md:flex-row relative cursor-pointer justify-start items-center `
       }
       onMouseOver={() => setMouseOver(true)}
       onMouseLeave={() => setMouseOver(false)}>

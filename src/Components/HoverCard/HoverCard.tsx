@@ -6,22 +6,18 @@ type HoveCard = {
   subTitle: string;
   progressBar: React.ReactElement;
   transitionTitleColor?: any;
+  color?: string;
 };
 const HoverCard = (props: HoveCard) => {
-  const {
-    hoverTransitionTitle,
-    subTitle,
-    progressBar,
-    transitionTitleColor,
-    otherSection,
-  } = props;
+  const { hoverTransitionTitle, subTitle, progressBar, otherSection, color } =
+    props;
   const [hover, setHover] = useState(false);
   return (
     <div
       className={
         otherSection
-          ? ` md:min-h-[28.8rem] md:w-[25rem] md:h-auto lg:h-auto lg:min-h-[33.8rem] lg:min-w-[35rem] min-h-[19rem] h-auto w-[22rem] rounded-[5px]  bg-white dark:bg-deep-blue overflow-hidden cursor-pointer border-[1px] border-gray-400 dark:border-white/20 `
-          : ` md:min-h-[16rem] md:min_w-[15rem] lg:w-20rem lg:w-[20rem] lg:min-h-[20rem] md:h-auto min-h-[19rem] h-auto w-[17rem] rounded-[5px]  bg-white dark:bg-deep-blue    overflow-hidden cursor-pointer border-[1px] border-gray-400 dark:border-white/20`
+          ? ` md:min-h-[20rem]  md:h-auto lg:h-auto lg:min-h-[25rem] sm:w-[35rem] md:w-[45rem] lg:w-[43.5rem] min-h-[19rem] h-auto w-[22rem] rounded-[15px]  bg-white dark:bg-deep-blue overflow-hidden cursor-pointer border-[1px] border-gray-200 dark:border-white/20 `
+          : ` md:min-h-[16rem] md:min-w-[15rem] lg:w-20rem lg:w-[20rem] lg:min-h-[20rem] md:h-auto min-h-[19rem] h-auto w-[17rem] rounded-[8px]  bg-white dark:bg-deep-blue overflow-hidden cursor-pointer border-[1px] border-gray-200 dark:border-white/20`
       }
       onMouseOver={() => {
         setHover(true);
@@ -29,27 +25,39 @@ const HoverCard = (props: HoveCard) => {
       onMouseLeave={() => {
         setHover(false);
       }}>
-      <div className="relative z-[1] md:h-[8rem] lg:h-[11rem] h-[9rem] flex flex-row justify-around items-center overflow-hidden gap-10 text-deep-blue dark:text-white ">
+      <div className="relative z-[1] md:h-[8rem] lg:h-[10rem] h-[9rem] flex flex-row justify-start items-center overflow-hidden gap-40 text-deep-blue dark:text-white ">
         <h1
           className={
             otherSection
-              ? `text-deep-blue font-bold dark:text-white background-title  relative font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[0] md:text-8xl lg:text-8xl text-[5.5rem] left-[10rem] uppercase ${
+              ? ` font-bold text-deep-blue dark:text-white background-title  relative font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[1] md:text-8xl lg:text-8xl text-[5.5rem] left-[10rem] uppercase ${
                   hover && "translate-x-[-31rem]"
-                } transition ease-in-out duration-[2.5s] text-[${transitionTitleColor}] `
-              : `text-deep-blue dark:text-white background-title  relative font-[fantasy,sans] font-bold w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-9xl lg:font-[1000] left-[10rem] uppercase ${
-                  hover && "translate-x-[-32rem]"
-                } transition ease-in-out duration-[2.5s] text-[${transitionTitleColor}] `
+                } transition ease-in-out duration-[2s]`
+              : ` background-title  relative font-[fantasy,sans] font-bold w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-9xl lg:font-[1000] left-[10rem] uppercase ${
+                  hover && "translate-x-[-30rem]"
+                } transition ease-in-out duration-[2s] opacity-100 z-[1]  text-deep-blue dark:text-white `
           }>
           {hoverTransitionTitle}
         </h1>
-
+        {/* sits behind the marquee title as a back drop */}
+        <h1
+          className={
+            otherSection
+              ? `absolute  text-deep-blue/10 font-bold dark:text-yellow/10 background-title font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[0] md:text-[7rem] md:-top-[1.4rem] lg:text-[8rem] lg:-top-8 text-[5.5rem] 
+              left-[0rem] top-0 uppercase transition ease-in-out duration-[2.5s] ${
+                color ? `text-${color}` : `text-text-yellow/10`
+              } `
+              : `absolute  text-deep-blue/10 font-bold dark:text-yellow/10 background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-[9rem] lg:top- lg:font-[1000] left-[0rem] uppercase
+                } transition ease-in-out duration-[2s]  text-deep-blue dark:text-white`
+          }>
+          {hoverTransitionTitle}
+        </h1>
         <h1
           className={
             otherSection
               ? `hidden `
-              : `relative text-deep-blue font-bold dark:text-white background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-9xl lg:font-[1000]  left-[14rem] uppercase ${
-                  hover && "translate-x-[-32rem]"
-                } transition ease-in-out duration-[2.5s] text-[${transitionTitleColor}] `
+              : `relative font-bold background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-9xl lg:font-[1000]  left-[3rem] uppercase ${
+                  hover && "translate-x-[-30rem]"
+                } transition ease-in-out duration-[2s]  text-deep-blue dark:text-white`
           }>
           {hoverTransitionTitle}
         </h1>
@@ -60,7 +68,7 @@ const HoverCard = (props: HoveCard) => {
             otherSection
               ? `
         
-        title relative z-[1] bg-transparent md:text-[25px]text-[25px] lg:text-[30px] font-bold uppercase whitespace-nowrap text-deep-blue dark:text-white`
+        title relative z-[1] bg-transparent md:text-[25px] text-[25px] lg:text-[30px] font-bold uppercase whitespace-nowrap text-deep-blue dark:text-white`
               : `
         
         title relative z-[1] bg-transparent md:text-[20px] text-[25px] lg:text-[30px] font-bold font-[fantasy,sans] uppercase whitespace-nowrap text-deep-blue dark:text-white`
@@ -70,7 +78,7 @@ const HoverCard = (props: HoveCard) => {
         <div
           className={
             otherSection
-              ? `progress-bar  relative z-[1] bg-transparent text-[20px] py-5 text-deep-blue dark:text-white`
+              ? `progress-bar  relative z-[1] bg-transparent text-[18px] py-5 text-deep-blue dark:text-white`
               : `progress-bar relative z-[1] bg-transparent text-[20px] py-3 text-deep-blue dark:text-white`
           }>
           {progressBar}

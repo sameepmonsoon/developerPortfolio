@@ -6,7 +6,9 @@ import LocationContainer from "../../Components/LocationContainer/LocationContai
 import { motion } from "framer-motion";
 const GetIntouch = () => {
   return (
-    <section className="flex flex-col justify-center items-center md:gap-[5rem] py-10">
+    <section
+      id="contact"
+      className="flex flex-col justify-center items-center md:gap-[5rem] py-10">
       <span className="order-1 flex flex-row text-[25px] font-semibold capitalize h-[5rem] md:h-full dark:text-white text-deep-blue">
         Get In Touch &nbsp;| &nbsp; say hello
       </span>
@@ -54,8 +56,8 @@ const GetIntouch = () => {
           </motion.div>
         </div>
       </div>
-      <motion.div
-        className="order-3 py-10"
+      {/* <motion.div
+        className="order-3 py-0"
         initial="visible"
         whileInView="visible"
         viewport={{ once: true, amount: 1 }}
@@ -80,7 +82,7 @@ const GetIntouch = () => {
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>{" "}
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
