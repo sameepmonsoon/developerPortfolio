@@ -18,12 +18,11 @@ const GetIntouch = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             variants={{
-              hidden: {
-                x: -100,
-              },
+              hidden: { opacity: 0, x: -100 },
               visible: {
+                opacity: 1,
                 x: 0,
               },
             }}>
@@ -35,12 +34,12 @@ const GetIntouch = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            transition={{ delay: 0.1, duration: 0.5 }}
+            transition={{ duration: 0.5 }}
             variants={{
-              hidden: {
+              hidden: {opacity: 0,
                 x: 100,
               },
-              visible: {
+              visible: {opacity:1,
                 x: 0,
               },
             }}>

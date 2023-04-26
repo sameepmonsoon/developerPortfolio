@@ -65,7 +65,7 @@ const HomeLayout = (props: HomeTypes) => {
             behavior: "smooth",
           });
         }}
-        className="group  fixed bottom-[1rem] right-5 text-deep-blue cursor-pointer h-[3rem] bg-gray-900 w-[2.4rem] flex justify-center items-center  rounded-lg">
+        className="group z-[20] fixed bottom-[1rem] right-5 text-deep-blue cursor-pointer h-[3rem] bg-gray-900 w-[2.4rem] flex justify-center items-center  rounded-lg">
         <FaHandPointUp
           size={24}
           id="scroll-to-top"

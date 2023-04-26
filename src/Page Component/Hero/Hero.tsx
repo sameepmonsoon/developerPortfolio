@@ -33,8 +33,8 @@ const Hero = (props: {
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.6 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ delay: 0.1, duration: 0.4 }}
           variants={{
             hidden: {
               opacity: 0,

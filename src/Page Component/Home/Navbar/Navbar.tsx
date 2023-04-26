@@ -41,7 +41,7 @@ const Navbar = (props: NavLinks) => {
           : "translate-y-0  transition-transform ease-in-out duration-[500ms] z-[10]"
       }`}>
       <Logo />
-      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-5 text-[17px] text-deep-blue font-[500] font-fanstasy">
+      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-0 text-[17px] text-deep-blue font-[500] font-fanstasy">
         <div className="hidden relative uppercase md:flex  justify-center items-center gap-1">
           {LinkName.map((name, index) => (
             <ScrollLink
@@ -67,14 +67,11 @@ const Navbar = (props: NavLinks) => {
               {name.label}
             </ScrollLink>
           ))}
-
-          <ToggleButton />
         </div>
+        <ToggleButton />
       </div>
       <div className="flex relative md:hidden text-deep-blue cursor-pointer items-center justify-center select-none z-[3]">
-        <span>
-          <ToggleButton />
-        </span>
+        <span>{/* <ToggleButton /> */}</span>
         <span onClick={handleNav}>
           {nav ? <IoCloseSharp size={27} /> : <RiMenuLine size={27} />}
         </span>
