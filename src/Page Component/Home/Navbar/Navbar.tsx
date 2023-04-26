@@ -51,12 +51,14 @@ const Navbar = (props: NavLinks) => {
               key={index}
               to={name.link}
               className={`px-4 cursor-pointer
-              hover:bg-deep-blue/10  hover:text-deep-blue h-10 flex justify-center items-center rounded-[4px] ${
-                // If the name.link has an extra whitespace, it won't retain the selected link. -- bg-color
+              hover:bg-deep-blue/10  hover:text-deep-blue h-10 flex justify-center items-center rounded-[4px] 
+              //
+                              // If the name.link has an extra whitespace, it won't retain the selected link. -- bg-color
 
-                location.pathname == name.link &&
-                "bg-deep-blue/10  text-deep-blue"
-              }`}
+                // location.pathname == name.link &&
+                // "bg-deep-blue/10  text-deep-blue"
+              // }`
+            }
               onClick={() => {
                 window.scrollTo({
                   top: 0,
@@ -82,10 +84,10 @@ const Navbar = (props: NavLinks) => {
       <div
         className={
           nav
-            ? "fixed  md:hidden left-0 top-[3.7rem] transition-left ease-in-out duration-[600ms] flex flex-col justify-start items-start shadow-[-1px_0px_1px_1px_grey] dark:border-r-white min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
-            : "fixed md:hidden left-0 top-[-30rem] transition-left ease-in-out duration-[1000ms] flex flex-col justify-start items-start shadow-[-1px_0px_1px_1px_grey] dark:border-r-white min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
+            ? "fixed  md:hidden left-0 top-[3.7rem] transition-left ease-in-out duration-[600ms] flex flex-col justify-start items-start border-b-[1px] border-b-white/20 min-w-full h-[15rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
+            : "fixed md:hidden left-0 top-[-30rem] transition-left ease-in-out duration-[1000ms] flex flex-col justify-start items-start  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
         }>
-        <Logo otherSection={true} />
+        {/* <Logo otherSection={true} /> */}
         {LinkName.map((name, index) => (
           <ScrollLink
             smooth={true}

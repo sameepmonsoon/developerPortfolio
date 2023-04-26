@@ -19,7 +19,7 @@ const AboutPage = () => {
     // <HomeLayout
     //   Children={
     <div id="about" className="pb-20">
-      <p className="h-20 w-full relative flex justify-center items-center px-10 lg:top-5 top-14">
+      <p className="h-20 w-full relative flex justify-center items-center px-10 lg:top-5 top-14  text-deep-blue dark:text-white">
         <span className="capitalize text-4xl font-[600]">about me</span>
       </p>
       <motion.div

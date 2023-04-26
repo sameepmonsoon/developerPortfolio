@@ -5,7 +5,7 @@ import ProgressBar from "../../Components/ProgressBar/ProgressBar";
 const SkillsPage = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <p className="h-20 w-full relative flex justify-center items-center px-10 lg:top-5 top-14">
+      <p className="h-20 w-full relative flex justify-center items-center px-10 lg:top-5 top-14  text-deep-blue dark:text-white ">
         <span className="capitalize text-4xl font-[600]">proficiency</span>
       </p>
       <div
@@ -68,7 +68,7 @@ const SkillsPage = () => {
               <HoverCard
                 hoverTransitionTitle="CSS"
                 subTitle="CSS"
-                color={"white"}
+                color={"black"}
                 progressBar={<ProgressBar showText={true} level={75} />}
               />
             </motion.div>

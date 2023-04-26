@@ -29,12 +29,16 @@ const HoverCard = (props: HoveCard) => {
         <h1
           className={
             otherSection
-              ? ` font-bold text-deep-blue dark:text-white background-title  relative font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[1] md:text-8xl lg:text-8xl text-[5.5rem] left-[10rem] uppercase ${
+              ? ` font-bold background-title  relative font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[1] md:text-8xl lg:text-8xl text-[5.5rem] left-[10rem] uppercase ${
                   hover && "translate-x-[-31rem]"
-                } transition ease-in-out duration-[2s]`
+                } transition ease-in-out duration-[2s] ${
+                  color ? `text-${color}` : `dark:text-white text-deep-blue `
+                } `
               : ` background-title  relative font-[fantasy,sans] font-bold w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-9xl lg:font-[1000] left-[10rem] uppercase ${
                   hover && "translate-x-[-30rem]"
-                } transition ease-in-out duration-[2s] opacity-100 z-[1]  text-deep-blue dark:text-white `
+                } transition ease-in-out duration-[2s] opacity-100 z-[1] ${
+                  color ? `text-${color}` : `dark:text-white text-deep-blue `
+                }`
           }>
           {hoverTransitionTitle}
         </h1>
@@ -43,10 +47,8 @@ const HoverCard = (props: HoveCard) => {
           className={
             otherSection
               ? `absolute  text-deep-blue/10 font-bold dark:text-yellow/10 background-title font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[0] md:text-[7rem] md:-top-[1.4rem] lg:text-[8rem] lg:-top-8 text-[5.5rem] 
-              left-[0rem] top-0 uppercase transition ease-in-out duration-[2.5s] ${
-                color ? `text-${color}` : `text-text-yellow/10`
-              } `
-              : `absolute  text-deep-blue/10 font-bold dark:text-yellow/10 background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-[9rem] lg:top- lg:font-[1000] left-[0rem] uppercase
+              left-[0rem] top-0 uppercase transition ease-in-out duration-[2.5s]`
+              : `absolute  text-deep-blue/10 font-bold dark:text-yellow/10 background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-[9rem] lg:top-2 lg:font-[1000] left-[0rem] uppercase
                 } transition ease-in-out duration-[2s]  text-deep-blue dark:text-white`
           }>
           {hoverTransitionTitle}
@@ -57,7 +59,9 @@ const HoverCard = (props: HoveCard) => {
               ? `hidden `
               : `relative font-bold background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-9xl lg:font-[1000]  left-[3rem] uppercase ${
                   hover && "translate-x-[-30rem]"
-                } transition ease-in-out duration-[2s]  text-deep-blue dark:text-white`
+                } transition ease-in-out duration-[2s] ${
+                  color ? `text-${color}` : `dark:text-white text-deep-blue `
+                }`
           }>
           {hoverTransitionTitle}
         </h1>

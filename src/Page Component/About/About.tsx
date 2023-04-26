@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="flex flex-col justify-center items-center">
-      <p className="h-20 w-full relative lg:top-[8rem] flex justify-center items-center px-10 ">
+      <p className="h-20 w-full relative lg:top-[8rem] flex justify-center items-center px-10 text-deep-blue dark:text-white">
         <span className="capitalize text-4xl font-[600]">what i do</span>
       </p>
       <div
@@ -29,7 +29,7 @@ const About = () => {
             otherSection={true}
             hoverTransitionTitle="Frontend development"
             subTitle="frontend development"
-            color={"red"}
+            color="yellow"
             progressBar={
               <p>
                 <span>
@@ -66,7 +66,7 @@ const About = () => {
             otherSection={true}
             hoverTransitionTitle="Designing & backend"
             subTitle="Designing & backend"
-            color={"yellow"}
+            color="blue"
             progressBar={
               <p>
                 <span>
