@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Footer from "../Page Component/Home/Footer/Footer";
 import Navbar from "../Page Component/Home/Navbar/Navbar";
-import { BsArrowUpSquareFill } from "react-icons/bs";
+import { FaHandPointUp } from "react-icons/fa";
+import image from "../../src/assets/superman.svg";
+import { TbArrowBigUpLinesFilled } from "react-icons/tb";
 type HomeTypes = {
   Children: React.ReactElement;
 };
@@ -30,6 +32,18 @@ const HomeLayout = (props: HomeTypes) => {
     const skillsSection = document.getElementById("skills");
     skillsSection?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const scrollToTopBtn: HTMLElement = document.getElementById(
+    "scroll-to-top"
+  ) as HTMLElement;
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 400) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
   return (
     <div className="flex flex-col overflow-hidden dark:bg-deep-blue bg-white  snap-proximity scroll-smooth font-playfair">
       <div className="order-1 z-[1]">
@@ -42,14 +56,25 @@ const HomeLayout = (props: HomeTypes) => {
         <Footer footerText={"@2023 By Monsoon"} />
       </div>
       <div
-        className="fixed bottom-[1rem] right-5 dark:text-white text-deep-blue cursor-pointer"
-        onClick={() =>
+        id="scroll-to-top"
+        onClick={() => {
           window.scrollTo({
             top: 0,
             behavior: "smooth",
-          })
-        }>
-        <BsArrowUpSquareFill size={40} />
+          });
+        }}
+        className="group  fixed bottom-[1rem] right-5 text-deep-blue cursor-pointer h-[3rem] bg-gray-900 w-[2.4rem] flex justify-center items-center  rounded-lg">
+        <FaHandPointUp
+          size={25}
+          id="scroll-to-top"
+          className="relative top-[0.6rem] left-[0.4rem] text-white"
+        />
+        {/* <RxDoubleArrowDown size={40} id="scroll-to-top" onClick={() => {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+          });
+          }}/> */}
       </div>
     </div>
   );

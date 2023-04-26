@@ -36,13 +36,13 @@ const Navbar = (props: NavLinks) => {
 
   return (
     <div
-      className={` z-[10] border-b-[1px] dark:border-b-white/20 bg-b-[0px 1px 2px fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex font-bold flex-row px-[2rem] items-center justify-center bg-white ${
+      className={` z-[10] border-b-[1px] dark:border-b-white/20 bg-b-[0px 1px 2px fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex flex-row px-[2rem] items-center justify-center bg-white ${
         !visible
           ? "-translate-y-[102%]  transition-transform ease-in-out duration-[300ms] z-[10]"
           : "translate-y-0  transition-transform ease-in-out duration-[500ms] z-[10]"
       }`}>
       <Logo />
-      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-5 text-[17px] text-deep-blue font-[500] font-sans">
+      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-5 text-[17px] text-deep-blue font-[500] font-fanstasy">
         <div className="hidden relative uppercase md:flex  justify-center items-center gap-1">
           {LinkName.map((name, index) => (
             <ScrollLink
