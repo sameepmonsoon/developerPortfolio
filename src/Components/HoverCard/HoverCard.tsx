@@ -47,9 +47,9 @@ const HoverCard = (props: HoveCard) => {
         <h1
           className={
             otherSection
-              ? `absolute  text-deep-blue/10 font-bold dark:text-gray-900 background-title font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[0] md:text-[7rem] md:-top-[1.4rem] lg:text-[8rem] lg:-top-8 text-[5.5rem] 
+              ? `absolute  text-deep-blue/10 font-bold dark:text-yellow/10 background-title font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[0] md:text-[7rem] md:-top-[1.4rem] lg:text-[8rem] lg:-top-8 text-[5.5rem] 
               left-[0rem] top-0 uppercase transition ease-in-out duration-[2.5s]`
-              : `absolute  text-deep-blue/10 font-bold dark:text-gray-900 background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-[9rem] lg:top-2 lg:font-[1000] left-[0rem] uppercase
+              : `absolute  text-deep-blue/10 font-bold dark:text-yellow/10 background-title font-[fantasy,sans] w-auto h-[80%] z-[0] whitespace-nowrap md:text-8xl text-9xl lg:text-[9rem] lg:top-2 lg:font-[1000] left-[0rem] uppercase
                 } transition ease-in-out duration-[2s]  text-deep-blue dark:text-white`
           }>
           {hoverTransitionTitle}
