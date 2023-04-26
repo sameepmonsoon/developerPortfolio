@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 type ProgressBarTypes = {
   level: number;
   showText: boolean;
+  color?: string;
 };
 
 const ProgressBar = (props: ProgressBarTypes) => {
@@ -34,7 +35,7 @@ const ProgressBar = (props: ProgressBarTypes) => {
 
   return (
     <div
-      className="h-[2.3rem] w-[100%] dark:bg-white bg-deep-blue rounded-[3px] p-[3px] flex flex-row flex-nowrap justify-start items-center"
+      className={`h-[2.3rem] w-[100%] dark:bg-white bg-deep-blue ${props.color && `bg-white border-[1px] border-gray-300 text-white`} rounded-[3px] p-[3px] flex flex-row flex-nowrap justify-start items-center`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
       <span

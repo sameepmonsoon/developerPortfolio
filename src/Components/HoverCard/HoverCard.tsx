@@ -17,7 +17,7 @@ const HoverCard = (props: HoveCard) => {
       className={
         otherSection
           ? ` md:min-h-[20rem]  md:h-auto lg:h-auto lg:min-h-[25rem] sm:w-[35rem] md:w-[45rem] lg:w-[43.5rem] min-h-[19rem] h-auto w-[22rem] rounded-[15px]  bg-white dark:bg-deep-blue overflow-hidden cursor-pointer border-[1px] border-gray-200 dark:border-white/20 `
-          : ` md:min-h-[16rem] md:min-w-[15rem] lg:w-20rem lg:w-[20rem] lg:min-h-[20rem] md:h-auto min-h-[19rem] h-auto w-[17rem] rounded-[8px]  bg-white dark:bg-deep-blue overflow-hidden cursor-pointer border-[1px] border-gray-200 dark:border-white/20`
+          : ` md:min-h-[16rem] md:min-w-[15rem] lg:w-20rem lg:w-[20rem] lg:min-h-[19rem] md:h-auto min-h-[19rem] h-auto w-[17rem] rounded-[8px]  bg-white dark:bg-deep-blue overflow-hidden cursor-pointer border-[1px] border-gray-200 dark:border-white/20`
       }
       onMouseOver={() => {
         setHover(true);
@@ -27,6 +27,7 @@ const HoverCard = (props: HoveCard) => {
       }}>
       <div className="relative z-[1] md:h-[8rem] lg:h-[10rem] h-[9rem] flex flex-row justify-start items-center overflow-hidden gap-40 text-deep-blue dark:text-white ">
         <h1
+          style={{ color: color }}
           className={
             otherSection
               ? ` font-bold background-title  relative font-[fantasy,sans] lg:font-[1000] w-[500px] h-[80%] whitespace-nowrap z-[1] md:text-8xl lg:text-8xl text-[5.5rem] left-[10rem] uppercase ${
@@ -54,6 +55,7 @@ const HoverCard = (props: HoveCard) => {
           {hoverTransitionTitle}
         </h1>
         <h1
+          style={{ color: color }}
           className={
             otherSection
               ? `hidden `
@@ -68,6 +70,7 @@ const HoverCard = (props: HoveCard) => {
       </div>
       <div className="px-3">
         <span
+          // style={{ color: color }}
           className={
             otherSection
               ? `
@@ -80,9 +83,10 @@ const HoverCard = (props: HoveCard) => {
           {subTitle}
         </span>
         <div
+          // style={{ color: color }}
           className={
             otherSection
-              ? `progress-bar  relative z-[1] bg-transparent text-[18px] py-5 text-deep-blue dark:text-white`
+              ? `progress-bar  relative z-[1] bg-transparent text-[18px] py-5 text-deep-blue   dark:text-white`
               : `progress-bar relative z-[1] bg-transparent text-[20px] py-3 text-deep-blue dark:text-white`
           }>
           {progressBar}

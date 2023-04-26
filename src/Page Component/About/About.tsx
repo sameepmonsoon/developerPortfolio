@@ -29,7 +29,7 @@ const About = () => {
             otherSection={true}
             hoverTransitionTitle="Frontend development"
             subTitle="frontend development"
-            color="yellow"
+            // color="#FDCC49"
             progressBar={
               <p>
                 <span>
@@ -66,7 +66,7 @@ const About = () => {
             otherSection={true}
             hoverTransitionTitle="Designing & backend"
             subTitle="Designing & backend"
-            color="blue"
+            // color="#2CBCE9"
             progressBar={
               <p>
                 <span>

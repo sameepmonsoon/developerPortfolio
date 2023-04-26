@@ -46,7 +46,6 @@ const SkillsPage = () => {
               <HoverCard
                 hoverTransitionTitle="html"
                 subTitle="html"
-                color={"orange"}
                 progressBar={<ProgressBar showText={true} level={80} />}
               />
             </motion.div>
@@ -68,7 +67,6 @@ const SkillsPage = () => {
               <HoverCard
                 hoverTransitionTitle="CSS"
                 subTitle="CSS"
-                color={"black"}
                 progressBar={<ProgressBar showText={true} level={75} />}
               />
             </motion.div>
@@ -90,7 +88,6 @@ const SkillsPage = () => {
               <HoverCard
                 hoverTransitionTitle="JavaScript"
                 subTitle="JavaScript"
-                color={"yellow"}
                 progressBar={<ProgressBar showText={true} level={55} />}
               />
             </motion.div>
@@ -112,7 +109,6 @@ const SkillsPage = () => {
               <HoverCard
                 hoverTransitionTitle="React"
                 subTitle="React"
-                color="blue"
                 progressBar={<ProgressBar showText={true} level={50} />}
               />
             </motion.div>
@@ -134,7 +130,9 @@ const SkillsPage = () => {
               <HoverCard
                 hoverTransitionTitle="Tailwind Css"
                 subTitle="Tailwind Css"
-                progressBar={<ProgressBar showText={true} level={60} />}
+                progressBar={
+                  <ProgressBar showText={true} level={60} />
+                }
               />
             </motion.div>
             <motion.div
@@ -155,8 +153,9 @@ const SkillsPage = () => {
               <HoverCard
                 hoverTransitionTitle="Git & Github"
                 subTitle="Git & Github"
-                color={"black"}
-                progressBar={<ProgressBar showText={true} level={40} />}
+                progressBar={
+                  <ProgressBar showText={true} level={40} />
+                }
               />
             </motion.div>
           </div>
