@@ -18,7 +18,6 @@ const AboutPage = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        // transition={{ type: "spring", bounce: 0.8, duration: 3 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: {
@@ -60,10 +59,10 @@ const AboutPage = () => {
           },
         }}>
         <span className="w-[60rem] border-[1px] border-gray-300 dark:border-white/30 p-5 rounded-[10px] cursor-pointer hover:border-gray-400 dark:hover:border-white/40">
-          I'm a Frontend developer with experience in JavaScript, React, and
-          related libraries. My passion lies in creating engaging, responsive
-          user interfaces that enhance the overall user experience. I have an
-          avid interest in full-stack development and React Native, and I'm
+          I am an aspiring full-stack developer with experience in JavaScript,
+          React and related libraries. My passion lies in creating engaging,
+          responsive user interfaces that enhance the overall user experience. I
+          have an avid interest in mobile application development, and I'm
           constantly seeking opportunities to expand my skillset and knowledge.
         </span>
       </motion.div>

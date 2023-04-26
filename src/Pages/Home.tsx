@@ -1,4 +1,4 @@
-import image from "/src/assets/monsoon-avatar.jpg";
+import image from "/src/assets/monsoon.jpg";
 import Hero from "../Page Component/Hero/Hero";
 import About from "../Page Component/About/About";
 import HomeLayout from "../Layout/HomeLayout";
