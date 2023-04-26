@@ -7,7 +7,8 @@ import { TbSquareLetterM } from "react-icons/tb";
 import { renderToString } from "react-dom/server";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import { disableReactDevTools } from "@fvilers/disable-react-devtools";
+if (process.env.NODE_ENV === "production") disableReactDevTools;
 export const ThemeContext = createContext<any>(null);
 
 const App = () => {

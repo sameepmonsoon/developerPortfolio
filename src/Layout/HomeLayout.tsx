@@ -21,7 +21,7 @@ const HomeLayout = (props: HomeTypes) => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const NavLinkNames = [
-    { label: "Home", link: "/" },
+    { label: "Home", link: "home" },
     { label: "skills", link: "skill" },
 
     { label: "projects", link: "projects" },
@@ -38,15 +38,19 @@ const HomeLayout = (props: HomeTypes) => {
   ) as HTMLElement;
 
   window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 400) {
-      scrollToTopBtn.style.display = "block";
-    } else {
-      scrollToTopBtn.style.display = "none";
+    if (scrollToTopBtn !== null) {
+      if (window.pageYOffset > 400) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
     }
   });
 
   return (
-    <div className="flex flex-col overflow-hidden dark:bg-deep-blue bg-white  snap-proximity scroll-smooth font-playfair">
+    <div
+      className="flex flex-col overflow-hidden dark:bg-deep-blue bg-white  snap-proximity scroll-smooth font-playfair"
+      id="home">
       <div className="order-1 z-[10]">
         <Navbar LinkName={NavLinkNames} scrollToSkills={scrollToSkills} />
       </div>
