@@ -32,19 +32,18 @@ const HomeLayout = (props: HomeTypes) => {
     const skillsSection = document.getElementById("skills");
     skillsSection?.scrollIntoView({ behavior: "smooth" });
   };
-  setTimeout(() => {
-    const scrollToTopBtn: HTMLElement = document.getElementById(
-      "scroll-to-top"
-    ) as HTMLElement;
 
-    window.addEventListener("scroll", () => {
-      if (window.pageYOffset > 400) {
-        scrollToTopBtn.style.display = "block";
-      } else {
-        scrollToTopBtn.style.display = "none";
-      }
-    });
-  }, 1000); // delay execution for 1 second
+  const scrollToTopBtn: HTMLElement = document.getElementById(
+    "scroll-to-top"
+  ) as HTMLElement;
+
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 400) {
+      scrollToTopBtn.style.display = "block";
+    } else {
+      scrollToTopBtn.style.display = "none";
+    }
+  });
 
   return (
     <div className="flex flex-col overflow-hidden dark:bg-deep-blue bg-white  snap-proximity scroll-smooth font-playfair">
@@ -59,6 +58,7 @@ const HomeLayout = (props: HomeTypes) => {
       </div>
       <div
         id="scroll-to-top"
+        style={{ display: "none" }}
         onClick={() => {
           window.scrollTo({
             top: 0,

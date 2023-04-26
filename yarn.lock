@@ -454,6 +454,11 @@
     "@stripe/react-stripe-js" "^1.7.1"
     "@stripe/stripe-js" "^1.35.0"
 
+"@fvilers/disable-react-devtools@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@fvilers/disable-react-devtools/-/disable-react-devtools-1.3.0.tgz#d4f9cb23e955351765788cba363f87d88febc843"
+  integrity sha512-LbASP6voPkKS5b6OlQhupEDtMeoAakamauqLEFHatkQUTmblNY5nPK7/eSqKBXxExT6uypVPczpTsJjJIrhpOQ==
+
 "@gar/promisify@^1.0.1", "@gar/promisify@^1.1.3":
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.3.tgz#555193ab2e3bb3b6adc3d551c9c030d9e860daf6"
@@ -705,6 +710,11 @@
   resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.2.tgz#ee771e2ba4b3dc5b372935d549fd9617bf345b8c"
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
+"@types/node@^18.16.1":
+  version "18.16.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.16.1.tgz#5db121e9c5352925bb1f1b892c4ae620e3526799"
+  integrity sha512-DZxSZWXxFfOlx7k7Rv4LAyiMroaxa3Ly/7OOzZO8cBNho0YzAi4qlbrx8W27JGqG57IgR/6J7r+nOJWw6kcvZA==
+
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.1.tgz#d3357479a0fdfdd5907fe67e17e0a85c906e1301"
@@ -796,6 +806,11 @@
     "@babel/plugin-transform-react-jsx-source" "^7.19.6"
     magic-string "^0.27.0"
     react-refresh "^0.14.0"
+
+D@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/D/-/D-1.0.0.tgz#c348a4e034f72847be51206fc530fc089e9cc2a9"
+  integrity sha512-nQvrCBu7K2pSSEtIM0EEF03FVjcczCXInMt3moLNFbjlWx6bZrX72uT6/1uAXDbnzGUAx9gTyDiQ+vrFi663oA==
 
 abbrev@1:
   version "1.1.1"

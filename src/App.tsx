@@ -2,13 +2,9 @@ import React, { createContext, useState } from "react";
 import { RouterProvider, createHashRouter } from "react-router-dom"; // import createHashRouter from react-router-dom
 import Home from "./Pages/Home";
 import "./App.css";
-import Projects from "./Pages/Projects";
-import Contact from "./Pages/Contact";
-import PageNotFound from "./Pages/PageNotFound";
 import { Helmet } from "react-helmet";
 import { TbSquareLetterM } from "react-icons/tb";
 import { renderToString } from "react-dom/server";
-import AboutPage from "./Pages/AboutPage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
