@@ -9,7 +9,6 @@ type NavLinks = {
   LinkName: Array<any>;
   scrollToSkills: () => void;
 };
-
 const Navbar = (props: NavLinks) => {
   const { LinkName } = props;
   const [nav, setNav] = useState(false);

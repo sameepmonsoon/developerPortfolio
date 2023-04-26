@@ -4,7 +4,7 @@ import HoverCard from "../../Components/HoverCard/HoverCard";
 import ProgressBar from "../../Components/ProgressBar/ProgressBar";
 const SkillsPage = () => {
   return (
-    <div className="flex flex-col justify-center items-center pt-5" id="skill">
+    <div className="flex flex-col justify-center items-center">
       <p className="h-20 w-full relative flex justify-center items-center px-10 lg:top-5 top-14  text-deep-blue dark:text-white ">
         <span className="capitalize text-4xl font-[600]">proficiency</span>
       </p>

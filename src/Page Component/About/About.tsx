@@ -3,13 +3,13 @@ import HoverCard from "../../Components/HoverCard/HoverCard";
 import { motion } from "framer-motion";
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center h-auto">
+    <div
+      className="flex flex-col justify-center items-center h-auto pt-[3.4rem] md:pt-0"
+      id="skill">
       <p className="h-20 w-full relative lg:top-[8rem] flex justify-center items-center px-10 text-deep-blue dark:text-white">
         <span className="capitalize text-4xl font-[600]">what i do</span>
       </p>
-      <div
-        id="skill"
-        className="md:px-10 flex lg:flex-row flex-col items-center gap-10 justify-start md:justify-around flex-2 lg:h-screen snap-start">
+      <div className="md:px-10 flex lg:flex-row flex-col items-center gap-10 justify-start md:justify-around flex-2 lg:h-screen snap-start">
         <motion.div
           initial="hidden"
           whileInView="visible"
