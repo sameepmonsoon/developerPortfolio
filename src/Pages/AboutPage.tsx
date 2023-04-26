@@ -4,7 +4,7 @@ import { useScroll, motion } from "framer-motion";
 import { FaLaptopCode, FaSchool, FaUniversity } from "react-icons/fa";
 import { IoSchoolSharp } from "react-icons/io5";
 import { TbCertificate } from "react-icons/tb";
-import aboutImage from "../assets/monsoon.jpg";
+import aboutImage from "../assets/monsoon-avatar.jpg";
 const AboutPage = () => {
   return (
     // <HomeLayout
