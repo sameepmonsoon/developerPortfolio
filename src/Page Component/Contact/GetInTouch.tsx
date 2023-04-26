@@ -8,7 +8,7 @@ const GetIntouch = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col justify-center items-center md:gap-[5rem] py-10">
+      className="flex flex-col justify-center items-center md:gap-[5rem] py-0">
       <span className="order-1 flex flex-row text-[25px] font-semibold capitalize h-[5rem] md:h-full dark:text-white text-deep-blue">
         Get In Touch &nbsp;| &nbsp; say hello
       </span>

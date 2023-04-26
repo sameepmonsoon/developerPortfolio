@@ -38,11 +38,11 @@ const Navbar = (props: NavLinks) => {
     <div
       className={` z-[10] border-b-[1px] dark:border-b-white/20 bg-b-[0px 1px 2px fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex font-bold flex-row px-[2rem] items-center justify-center bg-white ${
         !visible
-          ? "-translate-y-[102%]  transition-transform ease-in-out duration-[400ms] z-[10]"
-          : "translate-y-0  transition-transform ease-in-out duration-[400ms] z-[10]"
+          ? "-translate-y-[102%]  transition-transform ease-in-out duration-[300ms] z-[10]"
+          : "translate-y-0  transition-transform ease-in-out duration-[500ms] z-[10]"
       }`}>
       <Logo />
-      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-5 text-[15px] text-deep-blue font-[600] font-sans">
+      <div className="relative flex h-[100%] z-1 flex-row flex-1 justify-end items-center gap-5 text-[17px] text-deep-blue font-[500] font-sans">
         <div className="hidden relative uppercase md:flex  justify-center items-center gap-1">
           {LinkName.map((name, index) => (
             <ScrollLink
@@ -83,8 +83,12 @@ const Navbar = (props: NavLinks) => {
       <div
         className={
           nav
-            ? "fixed  md:hidden py-2 left-0 top-[3.7rem] opacity-1 transition-left ease-in-out duration-[300ms] z-[-1] flex flex-col justify-start items-center border-b-[0px] border-b-white/20 min-w-full h-[15rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
-            : "fixed md:hidden left-0 top-[-30rem] transition-left ease-in-out duration-[500ms] z-[-1] flex flex-col justify-start items-center  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
+            ? `fixed  md:hidden py-2 left-0 top-[3.6rem] opacity-1 transition-all ease-in-out duration-[400ms] z-[10] flex flex-col justify-start items-center border-b-[0px] border-b-white/20 min-w-full h-[15rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden ${
+                !visible
+                  ? "-translate-y-[100%]  transition-transform ease-in-out duration-[500ms] z-[-10]"
+                  : "translate-y-0  transition-all ease-in-out duration-[200ms] z-[-10]"
+              }`
+            : "fixed md:hidden left-0 top-[-30rem] transition-all ease-in-out duration-[400ms] z-[10] flex flex-col justify-start items-center  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
         }>
         {/* <Logo otherSection={true} /> */}
         {LinkName.map((name, index) => (
@@ -93,13 +97,13 @@ const Navbar = (props: NavLinks) => {
             duration={500}
             key={index}
             to={name.link}
-            className={`pt-[0px] relative cursor-pointer w-[50%] h-[4rem] flex flex-row justify-center z-[-10] items-center border-b-[rgba(255,255,255,0.9)] text-[17px]  pl-1 hover:bg-dark-grey/20 rounded-[1px] `}
+            className={`pt-[0px] relative cursor-pointer font-[400] w-[50%] h-[4rem] flex flex-row justify-center z-[-10] items-center border-b-[rgba(255,255,255,0.9)] text-[17px]  pl-1 hover:bg-dark-grey/20 rounded-[1px] `}
             onClick={() => {
               window.scrollTo({
                 top: 0,
                 behavior: "smooth",
               });
-              handleNav();
+              // handleNav();
             }}>
             {name.label}
           </ScrollLink>

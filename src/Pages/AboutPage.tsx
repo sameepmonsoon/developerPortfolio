@@ -18,8 +18,8 @@ const AboutPage = () => {
   return (
     // <HomeLayout
     //   Children={
-    <div id="about" className="pb-20">
-      <p className="h-20 w-full relative py-20 flex justify-center items-center px-10 lg:top-5 top-14  text-deep-blue dark:text-white">
+    <div id="about" className="pt-5">
+      <p className="h-20 w-full relative py-20 sm:py-10 flex justify-center items-center px-10 lg:top-5 top-14  text-deep-blue dark:text-white">
         <span className="capitalize text-4xl font-[600]">about me</span>
       </p>
       <motion.div
@@ -101,7 +101,7 @@ const AboutPage = () => {
           </motion.div>
           <div className="flex flex-col gap-y-10">
             <motion.div
-              className="flex flex-col md:flex-row min-h-[100px] text-deep-blue dark:text-white md:h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10"
+              className="flex flex-col md:flex-row min-h-[100px] text-deep-blue dark:text-white md:h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10 gap-y-2"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
@@ -132,7 +132,7 @@ const AboutPage = () => {
             </motion.div>
 
             <motion.div
-              className="flex flex-col md:flex-row text-deep-blue dark:text-white min-h-[100px] md:h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10"
+              className="flex flex-col md:flex-row text-deep-blue dark:text-white min-h-[100px] md:h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10 gap-y-2"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
@@ -162,7 +162,7 @@ const AboutPage = () => {
               </span>
             </motion.div>
             <motion.div
-              className="flex flex-col md:flex-row text-deep-blue dark:text-white min-h-[100px] md:h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10"
+              className="flex flex-col md:flex-row text-deep-blue dark:text-white min-h-[100px] md:h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10 gap-y-2"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
@@ -193,7 +193,7 @@ const AboutPage = () => {
           </div>
         </div>{" "}
         {/* <span className=" lg:h-[32rem] h-[1px] lg:w-[1px] w-full bg-gray-300"></span> */}
-        <div className="flex py-[3.6rem] flex-col justify-start items-center gap-y-12 sm:gap-y-11 h-screen">
+        <div className="flex py-[3.6rem] flex-col justify-start items-center gap-y-12 sm:gap-y-11 h-auto lg:h-screen">
           <motion.div
             className="flex flex-row h-[35px] text-deep-blue dark:text-white md:h-[50px] w-[20rem] md:w-[40rem] items-center justify-center px-5 text-[2rem] md:text-[3rem] font-[fantasy,sans] font-[500]"
             initial="hidden"
@@ -214,7 +214,7 @@ const AboutPage = () => {
             Experience
           </motion.div>
           <motion.div
-            className="flex flex-col md:flex-row min-h-[100px] text-deep-blue dark:text-white md:min-h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10 h-full"
+            className="flex flex-col md:flex-row min-h-[100px] text-deep-blue dark:text-white md:min-h-[150px] w-[40rem] items-center md:items-start justify-start px-5 gap-x-10 h-full gap-y-2"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.1 }}

@@ -3,7 +3,7 @@ import HoverCard from "../../Components/HoverCard/HoverCard";
 import { motion } from "framer-motion";
 const About = () => {
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center h-auto">
       <p className="h-20 w-full relative lg:top-[8rem] flex justify-center items-center px-10 text-deep-blue dark:text-white">
         <span className="capitalize text-4xl font-[600]">what i do</span>
       </p>
