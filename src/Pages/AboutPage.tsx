@@ -1,25 +1,16 @@
 import React, { useRef } from "react";
-import Card from "../Components/Card/Card";
 import HomeLayout from "../Layout/HomeLayout";
 import { useScroll, motion } from "framer-motion";
-import educationCardImage from "/src/assets/tu_svg.png";
-import educationCardImage2 from "/src/assets/chhorepatan.png";
 import { FaLaptopCode, FaSchool, FaUniversity } from "react-icons/fa";
 import { IoSchoolSharp } from "react-icons/io5";
-import { GrCertificate } from "react-icons/gr";
 import { TbCertificate } from "react-icons/tb";
-import { HiOutlineArrowLongUp } from "react-icons/hi2";
 import aboutImage from "../assets/monsoon.jpg";
 const AboutPage = () => {
-  const targetRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
   return (
     // <HomeLayout
     //   Children={
-    <div id="about" className="pt-5">
-      <p className="h-20 w-full relative py-20 sm:py-10 flex justify-center items-center px-10 lg:top-5 top-14  text-deep-blue dark:text-white">
+    <div id="about" className="pt-1">
+      <p className="h-[4rem] w-full relative py-20 sm:py-10 flex justify-center items-center px-10 lg:top-5 top-14 sm:top-10  text-deep-blue dark:text-white">
         <span className="capitalize text-4xl font-[600]">about me</span>
       </p>
       <motion.div

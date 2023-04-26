@@ -77,9 +77,9 @@ const Card = (props: CardTypes) => {
         <h2 className="font-semibold text-[18px] m-0 p-2 text-center w-full overflow-hidden">
           {cardTitle}
         </h2>
-        <p className="overflow-hidden m-0 px-3 w-full text-center md:px-0">
-          {cardDescription}{" "}
-        </p>
+        <div className="overflow-hidden m-0 px-3 w-full text-center md:px-0">
+          {cardDescription}
+        </div>
       </div>
     </section>
   );

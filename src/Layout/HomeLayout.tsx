@@ -32,18 +32,20 @@ const HomeLayout = (props: HomeTypes) => {
     const skillsSection = document.getElementById("skills");
     skillsSection?.scrollIntoView({ behavior: "smooth" });
   };
+  setTimeout(() => {
+    const scrollToTopBtn: HTMLElement = document.getElementById(
+      "scroll-to-top"
+    ) as HTMLElement;
 
-  const scrollToTopBtn: HTMLElement = document.getElementById(
-    "scroll-to-top"
-  ) as HTMLElement;
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 400) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    });
+  }, 1000); // delay execution for 1 second
 
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 400) {
-      scrollToTopBtn.style.display = "block";
-    } else {
-      scrollToTopBtn.style.display = "none";
-    }
-  });
   return (
     <div className="flex flex-col overflow-hidden dark:bg-deep-blue bg-white  snap-proximity scroll-smooth font-playfair">
       <div className="order-1 z-[1]">
@@ -65,7 +67,7 @@ const HomeLayout = (props: HomeTypes) => {
         }}
         className="group  fixed bottom-[1rem] right-5 text-deep-blue cursor-pointer h-[3rem] bg-gray-900 w-[2.4rem] flex justify-center items-center  rounded-lg">
         <FaHandPointUp
-          size={25}
+          size={24}
           id="scroll-to-top"
           className="relative top-[0.6rem] left-[0.4rem] text-white"
         />
