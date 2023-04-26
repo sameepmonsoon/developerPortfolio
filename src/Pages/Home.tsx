@@ -30,7 +30,7 @@ const Home = () => {
                 />
               </a>
             }
-            optionalButton={" Say Hello "}
+            optionalButton={" Say Hello"}
             optionalButtonPath={"contact"}
             userName={"Monsoon"}
             userIntroduction={

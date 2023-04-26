@@ -48,7 +48,7 @@ const HomeLayout = (props: HomeTypes) => {
 
   return (
     <div className="flex flex-col overflow-hidden dark:bg-deep-blue bg-white  snap-proximity scroll-smooth font-playfair">
-      <div className="order-1 z-[1]">
+      <div className="order-1 z-[10]">
         <Navbar LinkName={NavLinkNames} scrollToSkills={scrollToSkills} />
       </div>
       <div className="order-2 z-[0] mt-[4rem] snap-start overflow-hidden">

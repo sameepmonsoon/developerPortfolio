@@ -10,6 +10,7 @@ import {
   BsFacebook,
   ImTwitter,
 } from "react-icons/all";
+import { Link as ScrollLink } from "react-scroll";
 const Hero = (props: {
   userName: string | any;
   userIntroduction: string | any;
@@ -70,11 +71,13 @@ const Hero = (props: {
           <span className="flex flex-row transition duration-500 justify-center overflow-hidden flex-nowrap items-center min-h-[2.3rem] text-[1rem] font-semibold max-h-[2.6rem] w-auto max-w-[7rem] min-w-[6rem] px-1 rounded-[5px]  hover:bg-deep-blue hover:text-white hover:border-[1px] hover:border-white text-deep-blue dark:text-white dark:hover:text-deep-blue border-[1px] border-deep-blue/40 dark:border-white/40 dark:hover:bg-white">
             {resumeButton}
           </span>
-          <Link
-            to={`/${optionalButtonPath}`}
-            className="flex flex-row transition duration-500 justify-center overflow-hidden flex-nowrap items-center min-h-[2.3rem] text-[1rem] font-semibold max-h-[2.6rem] w-auto max-w-[7rem] min-w-[6rem] px-1 rounded-[5px]  hover:bg-deep-blue hover:text-white hover:border-[1px] hover:border-white text-deep-blue dark:text-white dark:hover:text-deep-blue border-[1px] border-deep-blue/40 dark:border-white/40 dark:hover:bg-white">
+          <ScrollLink
+            smooth={true}
+            duration={500}
+            to={optionalButtonPath ? optionalButtonPath.toString() : "/"}
+            className="flex flex-row transition cursor-pointer duration-500 justify-center overflow-hidden flex-nowrap items-center min-h-[2.3rem] text-[0.9rem] font-semibold max-h-[2.6rem] w-auto max-w-[7rem] min-w-[6rem] px-1 rounded-[5px]  hover:bg-deep-blue hover:text-white hover:border-[1px] hover:border-white text-deep-blue dark:text-white dark:hover:text-deep-blue border-[1px] border-deep-blue/40 dark:border-white/40 dark:hover:bg-white">
             {optionalButton}
-          </Link>
+          </ScrollLink>
         </motion.div>
         <motion.div
           className="flex mt-5 justify-center md:justify-start gap-10"

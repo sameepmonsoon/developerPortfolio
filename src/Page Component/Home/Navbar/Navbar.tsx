@@ -36,7 +36,7 @@ const Navbar = (props: NavLinks) => {
 
   return (
     <div
-      className={` z-[10] border-b-[1px] dark:border-b-white/20 bg-b-[0px 1px 2px fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex flex-row px-[2rem] items-center justify-center bg-white ${
+      className={` z-[10] border-b-[1px] dark:border-b-white/20 bg-b-[0px 1px 2px] fixed rgba(0, 0, 0, 0.1)] h-[58px] w-[100vw] flex flex-row px-[2rem] items-center justify-center bg-white ${
         !visible
           ? "-translate-y-[102%]  transition-transform ease-in-out duration-[300ms] z-[10]"
           : "translate-y-0  transition-transform ease-in-out duration-[500ms] z-[10]"
@@ -50,7 +50,7 @@ const Navbar = (props: NavLinks) => {
               duration={500}
               key={index}
               to={name.link}
-              className={`px-4 cursor-pointer z-[10]
+              className={`px-4 cursor-pointer
               hover:bg-deep-blue/10  hover:text-deep-blue h-10 flex justify-center items-center rounded-[4px] 
               //
                               // If the name.link has an extra whitespace, it won't retain the selected link. -- bg-color
@@ -72,7 +72,7 @@ const Navbar = (props: NavLinks) => {
           <ToggleButton />
         </div>
       </div>
-      <div className="flex relative md:hidden text-deep-blue cursor-pointer items-center justify-center select-none z-[-100 ]">
+      <div className="flex relative md:hidden text-deep-blue cursor-pointer items-center justify-center select-none z-[3]">
         <span>
           <ToggleButton />
         </span>
@@ -83,12 +83,12 @@ const Navbar = (props: NavLinks) => {
       <div
         className={
           nav
-            ? `fixed  md:hidden py-2 left-0 top-[3.6rem] opacity-1 transition-all ease-in-out duration-[400ms] z-[10] flex flex-col justify-start items-center border-b-[0px] border-b-white/20 min-w-full h-[15rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden ${
+            ? `fixed  md:hidden py-2 left-0 top-[3.6rem] opacity-1 transition-all ease-in-out duration-[400ms] z-[5] flex flex-col justify-start items-center border-b-[0px] border-b-white/20 min-w-full h-[15rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden ${
                 !visible
-                  ? "-translate-y-[100%]  transition-transform ease-in-out duration-[500ms] z-[-10]"
-                  : "translate-y-0  transition-all ease-in-out duration-[200ms] z-[-10]"
+                  ? "-translate-y-[100%]  transition-transform ease-in-out duration-[500ms] z-[5]"
+                  : "translate-y-0  transition-all ease-in-out duration-[200ms] z-[5]"
               }`
-            : "fixed md:hidden left-0 top-[-30rem] transition-all ease-in-out duration-[400ms] z-[10] flex flex-col justify-start items-center  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
+            : "fixed md:hidden left-0 top-[-30rem] transition-all ease-in-out duration-[400ms] z-[5] flex flex-col justify-start items-center  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
         }>
         {/* <Logo otherSection={true} /> */}
         {LinkName.map((name, index) => (
@@ -97,7 +97,7 @@ const Navbar = (props: NavLinks) => {
             duration={500}
             key={index}
             to={name.link}
-            className={`pt-[0px] relative cursor-pointer font-[400] w-[50%] h-[4rem] flex flex-row justify-center z-[-10] items-center border-b-[rgba(255,255,255,0.9)] text-[17px]  pl-1 hover:bg-dark-grey/20 rounded-[1px] `}
+            className={`pt-[0px] relative cursor-pointer font-[400] w-[50%] h-[4rem] flex flex-row justify-center z-[] items-center border-b-[rgba(255,255,255,0.9)] text-[17px]  pl-1 hover:bg-dark-grey/20 rounded-[1px] `}
             onClick={() => {
               window.scrollTo({
                 top: 0,
