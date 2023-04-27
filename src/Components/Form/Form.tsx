@@ -74,7 +74,7 @@ const Form = () => {
   return (
     //email is sent via formspree--- it needs a fromspree account "https://formspree.io/f/yourid"
     <form
-      action="https://formspree.io/f/mknavgee"
+      action="https://formspree.io/f/"
       method="POST"
       onSubmit={formik.handleSubmit}
       className=" flex flex-col gap-10 justify-start pt-2 items-center text-deep-blue text-[15px] font-semibold tracking-wider w-[10rem] md:w-[28rem] h-[60vh] ">
