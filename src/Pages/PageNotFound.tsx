@@ -7,7 +7,6 @@ const PageNotFound = () => {
       <BackgroundParallax
         pageDescription={"Page Not Found"}
         buttons={<Link to="/">Home</Link>}
-        // parallaxBgImage={"/src/assets/bg.jpg"}
       />
     </div>
   );

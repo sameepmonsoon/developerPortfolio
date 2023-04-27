@@ -1,14 +1,10 @@
-import React, { useRef } from "react";
-import HomeLayout from "../Layout/HomeLayout";
-import { useScroll, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaLaptopCode, FaSchool, FaUniversity } from "react-icons/fa";
 import { IoSchoolSharp } from "react-icons/io5";
 import { TbCertificate } from "react-icons/tb";
 import aboutImage from "../assets/monsoon-avatar.jpg";
 const AboutPage = () => {
   return (
-    // <HomeLayout
-    //   Children={
     <div id="about" className="pt-1">
       <p className="h-[4rem] w-full relative py-20 sm:py-10 flex justify-center items-center px-10 lg:top-5 top-14 sm:top-10  text-deep-blue dark:text-white">
         <span className="capitalize text-4xl font-[600]">about me</span>
@@ -45,7 +41,6 @@ const AboutPage = () => {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.1 }}
-        // transition={{ type: "spring", bounce: 0.8, duration: 3 }}
         transition={{ duration: 0.5 }}
         variants={{
           hidden: {
@@ -126,7 +121,6 @@ const AboutPage = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
-              // transition={{ type: "spring", bounce: 0.8, duration: 3 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               variants={{
                 hidden: {
@@ -181,8 +175,7 @@ const AboutPage = () => {
               </span>
             </motion.div>
           </div>
-        </div>{" "}
-        {/* <span className=" lg:h-[32rem] h-[1px] lg:w-[1px] w-full bg-gray-300"></span> */}
+        </div>
         <div className="flex py-[3.6rem] flex-col justify-start items-center gap-y-12 sm:gap-y-11 h-auto lg:h-screen">
           <motion.div
             className="flex flex-row h-[35px] text-deep-blue dark:text-white md:h-[50px] w-[20rem] md:w-[40rem] items-center justify-center px-5 text-[2rem] md:text-[3rem] font-[fantasy,sans] font-[500]"
@@ -244,8 +237,6 @@ const AboutPage = () => {
         </div>
       </div>
     </div>
-    //   }
-    // />
   );
 };
 

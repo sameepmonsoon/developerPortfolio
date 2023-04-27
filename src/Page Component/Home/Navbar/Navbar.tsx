@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Logo from "../../../Components/LogoContainer/Logo";
 import ToggleButton from "../../../Components/ToggleButton/ToggleButton";
 import { RiMenuLine, IoCloseSharp } from "react-icons/all";
@@ -18,8 +17,6 @@ const Navbar = (props: NavLinks) => {
   const handleNav = () => {
     setNav(!nav);
   };
-
-  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,12 +48,7 @@ const Navbar = (props: NavLinks) => {
               to={name.link}
               className={`px-4 cursor-pointer
               hover:bg-deep-blue/10  hover:text-deep-blue h-10 flex justify-center items-center rounded-[4px] 
-              //
-                              // If the name.link has an extra whitespace, it won't retain the selected link. -- bg-color
-
-                // location.pathname == name.link &&
-                // "bg-deep-blue/10  text-deep-blue"
-              // }`}
+`}
               onClick={() => {
                 window.scrollTo({
                   top: 0,
@@ -71,7 +63,6 @@ const Navbar = (props: NavLinks) => {
         <ToggleButton />
       </div>
       <div className="flex relative md:hidden text-deep-blue cursor-pointer items-center justify-center select-none z-[3]">
-        <span>{/* <ToggleButton /> */}</span>
         <span onClick={handleNav}>
           {nav ? <IoCloseSharp size={27} /> : <RiMenuLine size={27} />}
         </span>
@@ -86,7 +77,6 @@ const Navbar = (props: NavLinks) => {
               }`
             : "fixed md:hidden left-0 top-[-30rem] transition-all ease-in-out duration-[400ms] z-[5] flex flex-col justify-start items-center  min-w-full h-[20rem] bg-white dark:bg-deep-blue text-deep-blue  dark:text-white pl-5 pt-1 gap-3 uppercase overflow-hidden"
         }>
-        {/* <Logo otherSection={true} /> */}
         {LinkName.map((name, index) => (
           <ScrollLink
             smooth={true}
@@ -99,8 +89,7 @@ const Navbar = (props: NavLinks) => {
                 top: 0,
                 behavior: "smooth",
               });
-              // handleNav();
-            }}>
+            }}> 
             {name.label}
           </ScrollLink>
         ))}

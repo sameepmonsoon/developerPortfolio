@@ -3,8 +3,6 @@ import Hero from "../Page Component/Hero/Hero";
 import About from "../Page Component/About/About";
 import HomeLayout from "../Layout/HomeLayout";
 import Skills from "../Page Component/SkillsPage/SkillsPage";
-// add your cv file here
-// import resume from "../assets/monsoon_cv.pdf";
 import SpecialButton from "../Components/SpecialButton/SpecialButton";
 
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
@@ -20,7 +18,6 @@ const Home = () => {
           <Hero
             userImage={image}
             resumeButton={
-              // <a href={resume} download={resume}>
               <a
                 href="https://drive.google.com/file/d/19gIQ1Lu0I-vMNzxQiR562GoheJa7395C/view?usp=sharing"
                 target="_blank">
